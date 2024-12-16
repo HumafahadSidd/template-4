@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         <ul className="hidden md:flex space-x-6 text-gray-700">
           <li>
             <Link
-              href="#"
+              href="/"
               className="text-pink-500 hover:text-pink-600 font-medium"
             >
               Home
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/Pages"
               className="hover:text-gray-900 transition duration-200"
             >
               Pages
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/Products"
               className="hover:text-gray-900 transition duration-200"
             >
               Products
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="Blog"
               className="hover:text-gray-900 transition duration-200"
             >
               Blog
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="Shop"
               className="hover:text-gray-900 transition duration-200"
             >
               Shop
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="Contact"
               className="hover:text-gray-900 transition duration-200"
             >
               Contact

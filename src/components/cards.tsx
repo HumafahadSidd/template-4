@@ -1,66 +1,27 @@
-import React from 'react';
 
-const ColorFontPalette = () => {
-  const colors = [
-    { name: 'Pink', hex: '#FB2E86' },
-    { name: 'Navy Blue', hex: '#FB2E86' },
-    { name: 'Purple', hex: '#FB2E86' },
-    { name: 'Off Purple', hex: '#FB2E86' },
-    { name: 'Red', hex: '#FB2E86' },
-    { name: 'Sky Blue', hex: '#FB2E86' },
-    { name: 'Blue', hex: '#FB2E86' },
-    { name: 'Pantone Purple', hex: '#FB2E86' },
-    { name: 'Off Blue', hex: '#FB2E86' },
-  ];
-
-  const fonts = [
-    { name: 'Josefin Sans', description: 'Full Typeface' },
-    { name: 'Lato', description: 'Regular' },
-  ];
-
+const Sidebar = () => {
   return (
-    <section className="container mx-auto px-5 py-10">
-      <div className="border border-blue-200 rounded-lg p-6">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {/* Color Section */}
-          <div className="col-span-2 md:col-span-3">
-            <h2 className="text-lg font-bold mb-4">Color</h2>
-            <div className="grid grid-cols-3 gap-4">
-              {colors.map((color, index) => (
-                <div key={index} className="p-4 border rounded-lg text-center">
-                  <div
-                    className="w-full h-20 rounded-lg mb-3"
-                    style={{ backgroundColor: color.hex }}
-                  ></div>
-                  <p className="text-sm font-semibold">{color.name}</p>
-                  <p className="text-xs text-gray-500">{color.hex}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="w-1/4 bg-white p-5 rounded-md shadow-md">
+      <h2 className="text-lg font-semibold mb-4">Product Brand</h2>
+      <ul className="space-y-2 mb-6">
+        <li><input type="checkbox" id="brand1" /> <label htmlFor="brand1">Coaster Furniture</label></li>
+        <li><input type="checkbox" id="brand2" /> <label htmlFor="brand2">Fusion Dot High Fashion</label></li>
+        <li><input type="checkbox" id="brand3" /> <label htmlFor="brand3">Unique Furniture</label></li>
+      </ul>
 
-          {/* Font Section */}
-          <div className="col-span-2 md:col-span-1">
-            <h2 className="text-lg font-bold mb-4">Font</h2>
-            <div className="space-y-4">
-              {fonts.map((font, index) => (
-                <div
-                  key={index}
-                  className="p-4 border rounded-lg text-center flex flex-col items-center"
-                >
-                  <p className="text-3xl" style={{ fontFamily: font.name }}>
-                    Aa
-                  </p>
-                  <p className="text-sm font-semibold">{font.name}</p>
-                  <p className="text-xs text-gray-500">{font.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <h2 className="text-lg font-semibold mb-4">Discount Offer</h2>
+      <ul className="space-y-2 mb-6">
+        <li><input type="checkbox" id="offer1" /> <label htmlFor="offer1">20% Cashback</label></li>
+        <li><input type="checkbox" id="offer2" /> <label htmlFor="offer2">5% Cashback</label></li>
+      </ul>
+
+      <h2 className="text-lg font-semibold mb-4">Price Filter</h2>
+      <ul className="space-y-2 mb-6">
+        <li><input type="radio" name="price" id="price1" /> <label htmlFor="price1">$100 - $500</label></li>
+        <li><input type="radio" name="price" id="price2" /> <label htmlFor="price2">$500 - $1000</label></li>
+      </ul>
+    </div>
   );
 };
 
-export default ColorFontPalette;
+export default Sidebar;

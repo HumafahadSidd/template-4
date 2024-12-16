@@ -2,3 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+.Rectangle132{ 
+
+position: absolute;
+width: 1170px;
+height: 509px;
+left: 371px;
+top: 532px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 25px 10px #F6F4FD;
+border-radius: 2px;
+}
+.Rectangle138
+{ 
+
+position: absolute;
+width: 375px;
+height: 487px;
+left: 556px;
+top: 545px;
+
+background: url(.jpg), #C4C4C4;
+border-radius: 3px;
+}
+.Rectangle134
+{ 
+
+position: absolute;
+width: 151px;
+height: 155px;
+left: 384px;
+top: 545px;
+}
+.sect2{ 
+background: url(.jpg), #C4C4C4;
+border-radius: 3px;
+}
+.Rectngle140
+{ 
+position: absolute;
+width: 1920px;
+height: 649px;
+left: 0px;
+top: 1172px;
+
+background: #F9F8FE;
+}
+.GridProdDetail{
+position: absolute;
+width: 1920px;
+height: 286px;
+left: 0px;
+top: 125px;
+background: #F6F5FF;
+
+}

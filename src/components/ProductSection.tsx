@@ -12,18 +12,11 @@ interface Product {
 
 const featuredProducts: Product[] = [
   { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/18.png", code: "YS9201" },
-  { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/19.png", code: "YS9201" },
-  { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/20.png", code: "YS9201" },
-  { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/21.png", code: "YS9201" },
-  { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/22.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/23.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/24.png", code: "YS9201" },
-   //{ id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/22.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/26.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/27.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/28.png", code: "YS9201" },
-  // { id: 1, title: "Cantilever Chair", price: "$42.00", imgSrc: "/29.png", code: "YS9201" },
-  // // Add more products
+  { id: 2, title: "Cantilever Chair", price: "$42.00", imgSrc: "/19.png", code: "YS9201" },
+  { id: 3, title: "Cantilever Chair", price: "$42.00", imgSrc: "/20.png", code: "YS9201" },
+  { id: 4, title: "Cantilever Chair", price: "$42.00", imgSrc: "/21.png", code: "YS9201" },
+  { id: 5, title: "Cantilever Chair", price: "$42.00", imgSrc: "/22.png", code: "YS9201" },
+   // // Add more products
 ];
 
 const FeaturedProducts: React.FC = () => {

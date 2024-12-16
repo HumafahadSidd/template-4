@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Product {
   id: number;
@@ -17,27 +18,27 @@ interface Offer {
 }
 
 const trendingProducts: Product[] = [
-  { id: 1, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/chair1.png' },
-  { id: 2, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/chair2.png' },
-  { id: 3, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/chair3.png' },
-  { id: 4, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/chair4.png' },
+  { id: 1, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/21.png' },
+  { id: 2, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/23.png' },
+  { id: 3, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/27.png' },
+  { id: 4, title: 'Cantilever chair', price: '$26.00', oldPrice: '$42.00', imgSrc: '/box for Image.png' },
 ];
 
 const specialOffers: Offer[] = [
-  { id: 1, description: '23% off in all products', linkText: 'Shop Now', imgSrc: '/offer1.png' },
-  { id: 2, description: '23% off in all products', linkText: 'View Collection', imgSrc: '/offer2.png' },
+  { id: 1, description: '23% off in all products', linkText: 'Shop Now', imgSrc: '/image 1162.png' },
+  { id: 2, description: '23% off in all products', linkText: 'View Collection', imgSrc: '/image 1161.png' },
 ];
 
 const sideProducts: Product[] = [
-  { id: 1, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/sidechair1.png' },
-  { id: 2, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/sidechair2.png' },
-  { id: 3, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/sidechair3.png' },
+  { id: 3, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/image 19.png' },
+  { id: 4, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/image 28.png' },
+  { id: 5, title: 'Executive Seat chair', price: '$32.00', imgSrc: '/image 30.png' },
 ];
 
 const TrendingProducts: React.FC = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto px-5 py-24">
+    <section className="text-gray-600 p-6 body-font">
+      <div className="container mx-auto px-3 py-24">
         {/* Section Title */}
         <h1 className="text-3xl font-bold text-center text-indigo-900 mb-12">Trending Products</h1>
 
@@ -61,11 +62,12 @@ const TrendingProducts: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2">
             {specialOffers.map((offer) => (
               <div key={offer.id} className="border rounded-md p-6 flex items-center">
-                <Image src={offer.imgSrc} alt={offer.description} width={100} height={100} className="object-cover mr-4" />
-                <div>
+                  <div>
                   <p className="text-lg font-medium text-gray-900">{offer.description}</p>
-                  <a href="#" className="text-indigo-600 underline mt-2 block">{offer.linkText}</a>
+                  <Link href="/ShopNow" className="text-indigo-600 underline mt-2 block">{offer.linkText}</Link>
                 </div>
+                <Image src={offer.imgSrc} alt={offer.description} width={200} height={200} className="object-cover mr-4" />
+
               </div>
             ))}
           </div>

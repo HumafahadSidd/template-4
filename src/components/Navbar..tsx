@@ -4,21 +4,14 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
-            <h1 className="text-lg font-bold text-blue-600">MyLogo</h1>
+          <div className="flex flex-col mt-2 items-center">
+            <h1 className="text-md font-bold text-[#151875]">Ecommerce Acceories & Fashion item </h1> 
+           <p className="text-slate-400 ">About 9,620 results (0.62 seconds)</p>      
           </div>
 
-          {/* Middle Section - Search Bar */}
-          <div className="flex-1 flex items-center justify-center">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
+         
           {/* Action Section (Dropdown Filters) */}
           <div className="flex items-center">
             {/* Per Page Dropdown */}
@@ -46,10 +39,24 @@ const Navbar: React.FC = () => {
                 id="sortBy"
                 className="ml-2 px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               >
-                <option>View</option>
+                <option>size</option>
                 <option>Price</option>
                 <option>Rating</option>
                 <option>Date</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="sortBy" className="text-sm font-medium text-gray-700">
+                View:
+              </label>
+              <select
+                id="View"
+                className="ml-2 px-4 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              >
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
               </select>
             </div>
           </div>
