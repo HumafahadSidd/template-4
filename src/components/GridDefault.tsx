@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function GridDefault(props:any) {
+export default function GridDefault() {
   return (
     <div>
        <div className='w-full h-[286px] bg-[#F6F5FF]'>

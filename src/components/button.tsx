@@ -1,10 +1,10 @@
-// import React from 'react'
+import React from 'react'
 
-// export default function Button(props:any) {
-//   const text:{"props"}
-//   return (
-//     <div>
-//       <Button>{text}</Button>
-//     </div>
-//   )
-// }
+export default function Button() {
+  
+  return (
+    <div>
+      <button type="button">Submit</button>
+    </div>
+  )
+}
