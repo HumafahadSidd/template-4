@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const DiscountItem: React.FC = () => {
   return (
-      <div className="flex flex-col px-8 font-sans">
+      <div className="flex flex-col mr-4 px-8 font-sans">
       <h1 className="text-3xl font-bold text-blue-900 text-center">Discount Item</h1>
         <div className="flex space-x-4 mb-4 justify-center">
         <Link href="#" className="text-pink-500">Wood Chair</Link>
@@ -14,7 +14,7 @@ const DiscountItem: React.FC = () => {
         <Link href="#" className="text-blue-900">Sofa Collection</Link>
       </div>
       
-      <div className='flex p-8'>  
+      <div className='flex p-8 ml-4'>  
         <div>   
       <h2 className="text-2xl font-bold text-blue-900">20% Discount Of All Products</h2>
       
@@ -34,7 +34,7 @@ const DiscountItem: React.FC = () => {
       </button>
       </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 ml-10">
         <Image src={"/18.png"} alt={"Eams Sofa Compact"}  width={500}  height={500} />
       </div>
     </div>

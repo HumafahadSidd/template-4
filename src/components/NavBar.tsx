@@ -33,9 +33,9 @@ return (
       <option value="lang">Riyal</option>
       </select>
 
-      
-      <Link href={"/"}className="mr-5 hover:text-gray-900"><div className="flex gap-2 px-3 py-2">Login v <RxPerson className=" size-5" /></div></Link>
-      <Link href={"/"}className="mr-5 hover:text-gray-900"><div className="flex gap-2 px-3 py-2">Wish List <CiHeart className="size-5" /></div></Link>
+    
+      <Link href={"/Login"}className="mr-5 hover:text-gray-900"><div className="flex gap-2 px-3 py-2">Login v <RxPerson className=" size-5" /></div></Link>
+      <Link href={"/WishList"}className="mr-5 hover:text-gray-900"><div className="flex gap-2 px-3 py-2">Wish List <CiHeart className="size-5" /></div></Link>
       <Link href={"/"}className="mr-5 hover:text-gray-900 justify-end"><LuShoppingCart className=" size- 5"/></Link>
     </nav>
     

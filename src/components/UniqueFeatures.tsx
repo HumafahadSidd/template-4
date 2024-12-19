@@ -48,7 +48,7 @@ const UniqueFeatures: React.FC = () => {
             <button className="bg-pink-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-pink-600">
               Add To Cart
             </button>
-            <p className="mt-4 text-indigo-900 font-medium">
+            <p className="mt-4 text-indigo-900 flex-col flex font-medium">
               B&B Italian Sofa <span className="text-gray-600">$32.00</span>
             </p>
           </div>

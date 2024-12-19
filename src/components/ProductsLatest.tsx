@@ -9,13 +9,16 @@ interface Product {
   price: string;
   imgSrc: string;
   code: string;
+  oldPrice: string;  
 }
 
 const FeaturedProduct: Product[] = [
-  { id: 5, title: "Cantilever Chair", price: "$42.00", imgSrc: "/18.png", code: "YS9201" },
-  { id: 6, title: "Cantilever Chair", price: "$42.00", imgSrc: "/19.png", code: "YS9201" },
-  { id: 7, title: "Cantilever Chair", price: "$42.00", imgSrc: "/20.png", code: "YS9201" },
-  { id: 8, title: "Cantilever Chair", price: "$42.00", imgSrc: "/16.png", code: "YS9201" },
+  { id: 5, title: "Cantilever Chair", oldPrice:'$65',price: "$42.00", imgSrc: "/image 1166.png", code: "YS9201" },
+  { id: 6, title: "Cantilever Chair",oldPrice:'$65', price: "$42.00", imgSrc: "/24.png", code: "YS9201" },
+  { id: 7, title: "Cantilever Chair",oldPrice:'$65', price: "$42.00", imgSrc: "/26.png", code: "YS9201" },
+  { id: 8, title: "Cantilever Chair",oldPrice:'$65', price: "$42.00", imgSrc: "/27.png", code: "YS9201" },
+  { id: 9, title: "Cantilever Chair",oldPrice:'$65', price: "$42.00", imgSrc: "/box for image.png", code: "YS9201" },
+  { id: 10, title: "Cantilever Chair",oldPrice:'$65', price: "$42.00", imgSrc: "/21.png", code: "YS9201" },
 ];
 
 const LatestProducts: React.FC = () => {
@@ -35,28 +38,16 @@ const LatestProducts: React.FC = () => {
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
           {FeaturedProduct.map((product) => (
             <div key={product.id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
+              <div className="rounded-lg h-65 bg-[#F7F7F7] overflow-hidden">
                 <Image alt={product.title} src={product.imgSrc} height={300} width={250} />
               </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">{product.title}</h2>
-              <p className="text-base leading-relaxed mt-2">
-                {product.code} - {product.price}
+              <div className='flex space-x-10'>
+              <h2 className="text-xl font-medium title-font text-violet-900 mt-5">{product.title} </h2>
+              <p className="text-base leading-relaxed mt-5">
+                {product.price} - <del> {product.oldPrice}</del>
               </p>
-              <Link href="/" className="text-indigo-500 inline-flex items-center mt-3">
-                View Details
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
-            </div>
+                          </div>
+                          </div>
           ))}
         </div>
       </div>

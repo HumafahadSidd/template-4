@@ -64,7 +64,7 @@ const TrendingProducts: React.FC = () => {
               <div key={offer.id} className="border rounded-md p-6 flex items-center">
                   <div>
                   <p className="text-lg font-medium text-gray-900">{offer.description}</p>
-                  <Link href="/ShopNow" className="text-indigo-600 underline mt-2 block">{offer.linkText}</Link>
+                  <Link href="/ShopNow" className="text-pink-600 text-2xl underline mt-2 block">{offer.linkText}</Link>
                 </div>
                 <Image src={offer.imgSrc} alt={offer.description} width={200} height={200} className="object-cover mr-4" />
 

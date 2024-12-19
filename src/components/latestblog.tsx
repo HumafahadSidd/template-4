@@ -36,7 +36,7 @@ const LatestBlog: React.FC = () => {
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
           {FeaturedPost.map((product) => (
             <div key={product.id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden ">
+              <div className="rounded-lg h-64 overflow-hidden hover:translate-y-2 ">
                 <Image alt={product.title} src={product.imgSrc} height={400} width={350} />
               </div>
               <h2 className="text-xl font-medium title-font text-violet-900 hover:text-pink-800 mt-5">{product.title}</h2>

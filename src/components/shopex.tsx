@@ -20,8 +20,8 @@ const FeaturedProduct:Box[] = [
 
 const Shopex: React.FC = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-600 body-font ">
+      <div className="container px-5 py-24 mx-auto ">
         <div className="flex flex-col">
           <div className="h-1 bg-gray-200 rounded overflow-hidden">
             <div className="w-24 h-full bg-indigo-500"></div>
@@ -32,14 +32,14 @@ const Shopex: React.FC = () => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <div className="flex flex-wrap sm:-m-4  -mx-4 -mb-10 -mt-4">
           {FeaturedProduct.map((product) => (
-            <div key={product.id} className="p-4 md:w-1/4 sm:mb-0 mb-6">
-              <div className="rounded-md h-30 overflow-hidden">
+            <div key={product.id} className="p-4 md:w-1/5 sm:mb-0 mb-6 border m-4 justify-center bg-[#31208A0D]">
+              <div className="rounded-md mt-6 ml-[100px] overflow-hidden h-[250px] w-[200] ">
                 <Image alt={product.title} src={product.imgSrc} height={100} width={100} />
               </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">{product.title}</h2>
-              <p className="text-base leading-relaxed mt-2">
+              <h2 className="text-xl font-medium title-font text-gray-900  ml-2">{product.title}</h2>
+              <p className="text-base leading-relaxed  ml-2 mt-3">
                 {product.content} 
               </p>
 

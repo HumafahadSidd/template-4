@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 const HeroSection: React.FC = () => {
   return (
     <section className="bg-purple-50">
@@ -27,9 +28,10 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Content */}
-        <div className="md:w-1/2 relative mt-8 md:mt-0 flex justify-center">
+         <div className="md:w-1/2 relative mt-8 md:mt-0 flex justify-center">
           {/* Chair Image */}
-          <Image src={"/1.png"} alt={"Chair"} height={600} width={1200} />
+          <Image src={"/1.png"} alt={"Chair"} height={600} width={1200} />  
+      
 
           {/* Discount Badge */}
           <div className="absolute top-8 right-8 bg-blue-500 text-white rounded-full px-4 py-2 text-lg font-medium">

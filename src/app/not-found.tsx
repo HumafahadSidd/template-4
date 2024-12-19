@@ -15,7 +15,7 @@ const NotFoundPage = () => {
       {/* Image Section */}
       <div className="flex flex-col items-center justify-center mt-10">
         <Image
-          src="Group 123.png"
+          src="/Group 123.png"
           alt="404 Illustration"
           height={200}
           width={200}        />

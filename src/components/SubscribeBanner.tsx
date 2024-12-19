@@ -13,7 +13,7 @@ const NewsletterSection: React.FC = () => {
         }}
       >
         {/* Overlay Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-white bg-opacity-70">
+        <div className="absolute -inset-2 flex flex-col items-center justify-center text-center bg-white bg-opacity-70">
           <h2 className="text-2xl font-bold text-indigo-800 mb-2">
             Get Latest Update By <br />Subscribe to Our Newsletter
           </h2>
@@ -23,57 +23,14 @@ const NewsletterSection: React.FC = () => {
         </div>
       </div>
       <div>
-         <div className="mt-6 mb-2 justify-self-center h-4">
+               </div>
+               <div className="pt-6 mb-2 justify-self-center h-4">
             <Image src={"/image 1174.png"} alt={"subscribeBanner"} height={100} width={800}/>
           </div>
         
-      </div>
 
-      {/* Brand Icons
-      <div className="container mx-auto mt-8">
-        <div className="flex justify-center space-x-6">
-          <div  className="opacity-70 hover:opacity-100 transition-opacity">
-          <Image
-            src="https://via.placeholder.com/100x50"
-            alt="Brand 4"
-          height={50} width={50} 
-          />
-          </div>
-          <div  className="opacity-70 hover:opacity-100 transition-opacity">
-          <Image
-            src="https://via.placeholder.com/100x50"
-            alt="Brand 4"
-            height={50} width={50} 
-           
-          />
-          </div>
-         <div  className="opacity-70 hover:opacity-100 transition-opacity">
-          <Image
-            src="https://via.placeholder.com/100x50"
-            alt="Brand 4"
-            height={50} width={50} 
-           
-          />
-          </div>
-          <div  className="opacity-70 hover:opacity-100 transition-opacity">
-          <Image
-            src="https://via.placeholder.com/100x50"
-            alt="Brand 4"
-            height={50} width={50} 
-           
-          />
-          </div>
-<div className="opacity-70 hover:opacity-100 transition-opacity">
 
-          <Image
-            src="https://via.placeholder.com/100x50"
-            alt="Brand 5"
-            height={50} width={50} 
-                     />
-                     
-        </div>
-      </div> */}
-    </section>
+          </section>
   );
 };
 

@@ -3,7 +3,7 @@
 
 import React from "react";
 import Image from "next/image";
-const ContactUs = () => {
+const Contact = () => {
   return (
     <div className="w-full bg-gray-50">
       {/* Top Section */}
@@ -106,11 +106,11 @@ const ContactUs = () => {
 
       {/* Illustration */}
       <div className="flex justify-center my-10">
-       <Image src={"Group 124.png"} alt={"peoples"} height={300} width={400}/>
+       <Image src={"Group 123.png"} alt={"peoples"} height={300} width={400}/>
 
       </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default Contact;
