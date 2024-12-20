@@ -1,121 +1,138 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-
 import React from 'react';
 import Image from 'next/image';
-// Sample Product Data (Replace with actual data fetched from API)
-const products = [
+import Navbar from '@/components/Navbar.';
+
+import FilterSidebar from '@/components/FilterSideBar';
+
+
+interface Product {
+  id: number;
+  imageSrc: string;
+  title: string;
+  price: string;
+  originalPrice: string;
+  description: string;
+  ratings: number;
+}
+
+const products: Product[] = [
   {
     id: 1,
-    name: 'Dictum morbi',
-    oldPrice: 58.00,
-    newPrice: 26.00,
-    rating: 4,
-    image: 'Rectangle 32 (4).png', 
-    },
+    imageSrc: "/p4/Rectangle 32.png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
   {
     id: 2,
-    name: 'Sodales sit',
-    oldPrice: 55.00,
-    newPrice: 30.00,
-    rating: 5,
-    image: 'Rectangle 32 (5).png',
+    imageSrc: "/p4/Rectangle 32 (1).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
   },
   {
     id: 3,
-    name: 'Nibh varius',
-    oldPrice: 52.00,
-    newPrice: 26.00,
-    rating: 3,
-    image: 'Rectangle 32 (6).png',
+    imageSrc: "/p4/Rectangle 32 (2).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 4,
+    imageSrc: "/p4/Rectangle 32 (4).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 5,
+    imageSrc: "/p4/Rectangle 32 (5).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 6,
+    imageSrc: "/p4/Rectangle 32 (6).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
   },
 ];
 
-// Sidebar Filter Component
-const Sidebar = () => {
+function ProductCard({ product }: { product: Product }) {
   return (
-    <aside className="sidebar">
-      <div className="filter-section">
-        <h3>Product Brand</h3>
-        <ul>
-          <li><input type="checkbox" /> Coaster Furniture</li>
-          <li><input type="checkbox" /> Fusion Dot High Fashion</li>
-          <li><input type="checkbox" /> Unique Furniture Restor</li>
-          <li><input type="checkbox" /> Dream Furniture Flipping</li>
-          <li><input type="checkbox" /> Young Repurposed</li>
-          <li><input type="checkbox" /> Green DIY Furniture</li>
-        </ul>
-      </div>
-
-      <div className="filter-section">
-        <h3>Discount Offer</h3>
-        <ul>
-          <li><input type="checkbox" /> 20% Cashback</li>
-          <li><input type="checkbox" /> 5% Cashback Offer</li>
-          <li><input type="checkbox" /> 25% Discount Offer</li>
-        </ul>
-      </div>
-
-      <div className="filter-section">
-        <h3>Rating Item</h3>
-        <ul>
-          <li>
-            <input type="checkbox" /> ★★★★★ (140)
-          </li>
-          <li>
-            <input type="checkbox" /> ★★★★☆ (120)
-          </li>
-          <li>
-            <input type="checkbox" /> ★★★☆☆ (95)
-          </li>
-          <li>
-            <input type="checkbox" /> ★★☆☆☆ (35)
-          </li>
-        </ul>
-      </div>
-    </aside>
-  );
-};
-
-// Product Card Component
-const ProductCard = ({ product }: { product: any}) => {
-  return (
-    <div className="product-card">
-      <Image src={product.image} alt={product.name} className="product-image"  height={300} width={250} />
-      <div className="product-info">
-        <h4>{product.name}</h4>
-        <div className="product-price">
-          <span className="new-price">${product.newPrice.toFixed(2)}</span>
-          <span className="old-price">${product.oldPrice.toFixed(2)}</span>
+    <div className='border shadow-sm mt-4 ml-6 h-[230px] w-[920px] pt-3'>
+      <div className='ml-4'>
+        <div className="flex gap-4">
+          <div>
+            <Image src={product.imageSrc} alt={product.title} height={300} width={300} />
+          </div>
+          <div className="flex flex-col justify-between">
+            <h2 className='text-[#111C85] font-semibold text-2xl mt-2'>{product.title}</h2>
+            <div className="flex gap-2 mt-4">
+              {[...Array(product.ratings)].map((_, index) => (
+                <Image key={index} src="/p3/ant-design_star-filled.png" alt="star" height={20} width={20} />
+              ))}
+              <Image src="/p3/vector.png" alt="star empty" height={20} width={20} />
+            </div>
+            <div className='flex gap-2 mt-4'>
+              <p>{product.price}</p>
+              <p className='text-pink-400'><del>{product.originalPrice}</del></p>
+            </div>
+            <p className='text-left w-[600px] h-[50px] mt-2'>{product.description}</p>
+            <div className='mt-2 flex gap-2'>
+              <Image src="/p3/uil_heart-alt.png" alt="heart" height={20} width={20} />
+              <Image src="/p3/uil_search-plus (1).png" alt="search" height={20} width={20} />
+              <Image src="/p3/fluent_cart-24-regular.png" alt="cart" height={20} width={20} />
+            </div>
+          </div>
         </div>
-        <div className="product-rating">
-          {'★'.repeat(product.rating)}
-          {'☆'.repeat(5 - product.rating)}
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
   );
-};
+}
 
-// Main Component
-const ShopLeftSidebar = () => {
+export default function ShopLeft() {
   return (
-    <div className="shop-page">
-      <h1>Shop Left Sidebar</h1>
-      <div className="shop-container">
-        {/* Sidebar Filters */}
-        <Sidebar />
-
-        {/* Product Listing */}
-        <section className="product-list">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </section>
+    <div>
+      
+      <div className='bg-[#F6F5FF] h-[286px] pl-[618px] pt-[111px] w-full'>
+        <h1 className='text-3xl text-indigo-800'>Shop Left Sidebar</h1>
+        <div>
+          <ul className='flex gap-3'>
+            <li className='hover:text-pink-500'>Home</li>
+            <li className='hover:text-pink-500'>Pages</li>
+            <li className='hover:text-pink-500'>Shop Left Sidebar</li>
+          </ul>
+        </div>
+      </div>
+      <div className='m-8'>
+        <Navbar />
+      </div>
+      <div className='main flex'>
+              <div className='leftSideBar ml-4'>
+      
+        <FilterSidebar />
+      </div>
+      <div className='ml-[250px]'>
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
     </div>
+    </div>
   );
-};
-
-export default ShopLeftSidebar;
+}

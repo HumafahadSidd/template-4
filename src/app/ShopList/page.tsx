@@ -111,7 +111,7 @@ export default function ShopList() {
         </div>
       </div>
 
-      {/* Navbar */}
+      
       <div className='m-8'>
         <Navbar />
       </div>
