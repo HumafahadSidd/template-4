@@ -2,7 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { FaCalendarAlt } from "react-icons/fa";
+import { CiPen } from "react-icons/ci";
 interface Post {
   id: number;
   title: string;
@@ -28,7 +29,7 @@ const LatestBlog: React.FC = () => {
             <div className="w-24 h-full bg-indigo-500"></div>
           </div>
           <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 className="sm:w-2/5 text-indigo-900 font-medium text-center title-font text-3xl justify-center ml-80 mb-2 sm:mb-0">
+            <h1 className="sm:w-2/5 text-indigo-900 font-semibold text-center hover:scale-105 title-font text-3xl justify-center ml-80 mb-2 sm:mb-0">
               Latest Blog
             </h1>
           </div>
@@ -39,10 +40,12 @@ const LatestBlog: React.FC = () => {
               <div className="rounded-lg h-64 overflow-hidden hover:translate-y-2 ">
                 <Image alt={product.title} src={product.imgSrc} height={400} width={350} />
               </div>
-              <h2 className="text-xl font-medium title-font text-violet-900 hover:text-pink-800 mt-5">{product.title}</h2>
-              <p className="text-base  flex leading-relaxed mt-2">
-                {product.name} &nbsp;&nbsp;&nbsp;  {product.date}
+              <p className="text-base  flex leading-relaxed mt-2 ">
+              <CiPen className='mt-1 text-pink-600'/> {product.name} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FaCalendarAlt className='mt-1 ml-2 size={10} text-pink-600'/>
+              {product.date}
               </p>
+              <h2 className="text-xl font-medium title-font text-violet-900 hover:text-pink-800 mt-5">{product.title}</h2>
+           
               <p>{product.content}</p>
               <Link href="/" className="text-indigo-500 hover:text-pink-600 inline-flex items-center mt-3">
                 Read Online

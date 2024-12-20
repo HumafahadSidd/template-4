@@ -1,55 +1,61 @@
-import React from 'react';
-import Image from 'next/image';
+
+import React from "react";
+import Image from "next/image";
 
 interface Product {
   id: number;
   title: string;
   price: string;
   imgSrc: string;
-  code: string;
 }
 
 const featuredProducts: Product[] = [
-  { id: 1, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/Top catagories (1).png", code: "YS9201" },
-  { id: 2, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/21.png", code: "YS9201" },
-  { id: 3, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/Component 10.png", code: "YS9201" },
-  { id: 4, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/Component 12.png", code: "YS9201" },
-  //{ id: 5, title: "Cantilever Chair", price: "$42.00", imgSrc: "/22.png", code: "YS9201" },
-   // // Add more products
+  { id: 1, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/19.png" },
+  { id: 2, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/20.png" },
+  { id: 3, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/21.png" },
+  { id: 4, title: "Mini LCW Chair", price: "$56.00", imgSrc: "/23.png" },
 ];
 
 const TopCategories: React.FC = () => {
   return (
-    <section className=" body-font">
-      <div className="container px-5 py-24 mx-auto mt-4">
-        <div className="flex flex-col">
-          <div className="h-1 bg-gray-200 rounded overflow-hidden">
-            <div className="w-24 h-full bg-indigo-500">
-          </div>
-          <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 className="sm:w-2/5 text-indigo-900 font-medium  text-center title-font text-3xl justify-center ml-80 mb-2 sm:mb-0">Top Categories</h1>
-            </div>
+    <section className="body-font bg-gray-50 py-16">
+      <div className="container mx-auto px-5">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-indigo-900">Top Categories</h1>
+          <div className="w-16 h-1 mx-auto bg-indigo-500 mt-4 rounded"></div>
         </div>
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          {featuredProducts.map((product) => (
-            <div key={product.id} className="p-4 md:w-1/4 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden hover:peer-visited:">
-                <Image alt={product.title} src={product.imgSrc} height={300} width={250} />
-              </div>
-              </div>
-              
-              
-                            
 
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredProducts.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col items-center text-center"
+            >
+              {/* Circular Background with Hover Effect */}
+              <div className="relative group w-40 h-40 rounded-full bg-indigo-100 flex items-center justify-center hover:animate-spin-slow">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-300 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Image
+                  alt={product.title}
+                  src={product.imgSrc}
+                  height={80}
+                  width={80}
+                  className="relative z-10"
+                />
+              </div>
+
+              {/* Title and Price */}
+              <h2 className="mt-4 text-lg font-medium text-gray-800">
+                {product.title}
+              </h2>
+              <p className="text-indigo-600 font-bold">{product.price}</p>
+            </div>
           ))}
-        
-        
-        
-      </div>
-      </div>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default TopCategories;

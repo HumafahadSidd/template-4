@@ -9,6 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        animation: {
+          'spin-slow': 'spin 4s linear infinite',
+          pulse: 'pulse 2s infinite',
+        },
+  
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -1,17 +1,20 @@
+import React from 'react'
 
-import React from 'react';
-import BreadcrumbHeader from '../components/NavBar';
-
-export default function GridDefaultPage() {
-  const breadcrumbs = [
-    { href: '/', label: 'Home', active: false },
-    { href: '/Shop', label: 'Shop', active: false },
-    { href: '#', label: 'Grid Default', active: true },
-  ];
-
+export default function GridDefault() {
+  
   return (
-    <div>
-      <BreadcrumbHeader title="Shop Grid Default" breadcrumbs={"shop left "} />
+    <div className=''>
+      <div className='bg-[#F6F5FF] h-[286px] pl-[618px] pt-[111px] w-full'>
+        <h1 className='text-3xl text-indigo-800'>Shop Grid Default</h1>
+        <div>
+          <ul className='flex gap-3 '>
+            <li className='hover:text-pink-500'>Home</li>
+            <li className='hover:text-pink-500'>Pages</li>
+            <li className='hover:text-pink-500'>Shop Grid Default</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import GridDefault from "@/components/GridDefault";
+
 import Navbar from "@/components/Navbar.";
 import React from "react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ export default function ShopLeftGrid() {
     <div>
       <div className="container">
         <div className="grid">
-          <GridDefault />
+          
           <Navbar />
 
           <div className="box border mt-4 shadow-md ml-8 flex gap-4 justify-center">

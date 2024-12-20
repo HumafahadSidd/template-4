@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import BreadcrumbHeader from '../../components/BreadCrumbs';
 import Navbar from '@/components/Navbar.';
+import GridDefault from '@/components/GridDefault';
 
 
 export default function Pages() {
@@ -42,11 +42,14 @@ const imageRows = [
 ];
 
   return (
+    <div>
+    <div>
+    <GridDefault />
+          </div>
     <section className="mt-8 justify-center ml-[200px] ">
-      <div>
-   <BreadcrumbHeader title="Shop Grid Default" breadcrumbs={"Shop Grid Default"} /> 
-      </div>
+      <div className='m-6'>
       <Navbar />
+      </div>
       {imageRows.map((row, index) => (
         <div key={index} className={`flex ${row.row === 'banner' ? 'justify-center' : 'space-x-4'}`}>
           {row.images.map((img, i) => (
@@ -55,8 +58,11 @@ const imageRows = [
             </div>
           ))}
         </div>
+        
+        
       ))}
     </section>
+    </div>
   );
 }
 
