@@ -106,7 +106,7 @@ const Contact = () => {
 
       {/* Illustration */}
       <div className="flex justify-center my-10">
-       <Image src={"Group 123.png"} alt={"peoples"} height={300} width={400}/>
+       <Image src={"/Group 124.png"} alt={"peoples"} height={300} width={400}/>
 
       </div>
     </div>
