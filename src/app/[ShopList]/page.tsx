@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar.';
+import Link from 'next/link';
 
 
 interface Product {
@@ -104,9 +105,9 @@ export default function ShopList() {
         <h1 className='text-3xl text-indigo-800'>Shop List</h1>
         <div>
           <ul className='flex gap-3'>
-            <li className='hover:text-pink-500'>Home</li>
-            <li className='hover:text-pink-500'>Pages</li>
-            <li className='hover:text-pink-500'>Shop Grid Default</li>
+            <Link href="/"><li className='hover:text-pink-500'>Home</li></Link>
+            <Link href="/Pages"><li className='hover:text-pink-500'>Pages</li></Link>
+            <Link href="/ShopList/ShopGrid"><li className='hover:text-pink-500'>Shop Grid Default</li></Link>
           </ul>
         </div>
       </div>

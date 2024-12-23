@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar.';
 
 import FilterSidebar from '@/components/FilterSideBar';
+import Link from 'next/link';
 
 
 interface Product {
@@ -113,9 +114,9 @@ export default function ShopLeft() {
         <h1 className='text-3xl text-indigo-800'>Shop Left Sidebar</h1>
         <div>
           <ul className='flex gap-3'>
-            <li className='hover:text-pink-500'>Home</li>
-            <li className='hover:text-pink-500'>Pages</li>
-            <li className='hover:text-pink-500'>Shop Left Sidebar</li>
+            <li><Link href="/" className='hover:text-pink-500'>Home</Link></li>
+            <li><Link href="/Pages" className='hover:text-pink-500'>Pages</Link></li>
+            <li><Link href="/ShopList/ShopGrid/ShopLeft" className='hover:text-pink-500'>Shop Left Sidebar</Link></li>
           </ul>
         </div>
       </div>
@@ -123,7 +124,7 @@ export default function ShopLeft() {
         <Navbar />
       </div>
       <div className='main flex'>
-              <div className='leftSideBar ml-4'>
+              <div className='leftSideBar ml-4<Link href={"/"}'>
       
         <FilterSidebar />
       </div>
