@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const HeroSection: React.FC = () => {
   return (
     <section className="bg-purple-50">
@@ -22,9 +22,9 @@ const HeroSection: React.FC = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in
             est adipiscing in phasellus non in justo.
           </p>
-          <button className="mt-6 bg-pink-500 text-white px-6 py-3 full hover:bg-pink-600">
+          <button className="mt-6 bg-pink-500 text-white px-6 py-3 full hover:bg-pink-600"><Link href="/ShopNow">
             Shop Now
-          </button>
+          </Link></button>
         </div>
 
         {/* Right Content */}

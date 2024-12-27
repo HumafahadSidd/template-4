@@ -123,14 +123,16 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    
     <header className="body-font bg-violet-800 text-white">
+      <div className="h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       <div className="container mx-auto flex flex-wrap p-4 items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center space-x-6">
           <FaRegEnvelope />
-          <Link href="/Email" passHref>
+          <a href="#" >
             <span className="text-white cursor-pointer">mhhasanul@gmail.com</span>
-          </Link>
+          </a>
           <span className="flex items-center space-x-2">
             <MdOutlineWifiCalling3 />
             <span>123456789</span>
@@ -172,24 +174,25 @@ export default function NavBar() {
             isOpen ? "block" : "hidden"
           } md:flex items-center space-x-6`}
         >
-          <Link href="/Login" passHref>
+          <Link href="/Link" >
             <div className="flex items-center space-x-2 cursor-pointer hover:text-gray-300">
               <span>Login</span>
               <RxPerson className="text-xl" />
             </div>
           </Link>
-          <Link href="/WishList" passHref>
+          <Link href="/WishList" >
             <div className="flex items-center space-x-2 cursor-pointer hover:text-gray-300">
               <span>Wish List</span>
               <CiHeart className="text-xl" />
             </div>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/ShoppingCart" >
             <div className="cursor-pointer hover:text-gray-300">
               <LuShoppingCart className="text-xl" />
             </div>
           </Link>
         </nav>
+      </div>
       </div>
     </header>
   );

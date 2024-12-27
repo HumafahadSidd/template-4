@@ -2,7 +2,7 @@
 "use client"; 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 const SingleBlog = () => {
   return (
     <div className="w-full bg-gray-50">
@@ -62,7 +62,7 @@ const SingleBlog = () => {
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="relative">
               <Image
-                src="/"
+                src="#"
                 alt="Video Thumbnail"
                 height={300} width={400}  
               />
@@ -99,24 +99,24 @@ const SingleBlog = () => {
             <h3 className="text-xl font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   Fashion (10)
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   Lifestyle (5)
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   Travel (7)
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   Others (3)
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -126,19 +126,19 @@ const SingleBlog = () => {
             <h3 className="text-xl font-semibold mb-4">Recent Posts</h3>
             <ul className="space-y-4 text-gray-600">
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   📍 Latest Trends in Fashion
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   🌍 Top Travel Destinations
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/" className="hover:text-pink-500">
+                <a href="#" className="hover:text-pink-500">
                   🏡 Home Decor Tips
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -164,24 +164,24 @@ const SingleBlog = () => {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link
-                href="/"
+              <a
+                href="#"
                 className="text-gray-600 hover:text-pink-500 transition"
               >
                 👍 Facebook
-              </Link>
-              <Link
-                href="/"
+              </a>
+              <a
+                href="#"
                 className="text-gray-600 hover:text-pink-500 transition"
               >
                 🐦 Twitter
-              </Link>
-              <Link
-                href="/"
+              </a>
+              <a
+                href="#"
                 className="text-gray-600 hover:text-pink-500 transition"
               >
                 📷 Instagram
-              </Link>
+              </a>
 
             </div>
           </div>
