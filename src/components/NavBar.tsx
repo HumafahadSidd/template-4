@@ -174,7 +174,7 @@ export default function NavBar() {
             isOpen ? "block" : "hidden"
           } md:flex items-center space-x-6`}
         >
-          <Link href="/Link" >
+          <Link href="/Login" >
             <div className="flex items-center space-x-2 cursor-pointer hover:text-gray-300">
               <span>Login</span>
               <RxPerson className="text-xl" />
@@ -186,7 +186,7 @@ export default function NavBar() {
               <CiHeart className="text-xl" />
             </div>
           </Link>
-          <Link href="/ShoppingCart" >
+          <Link href="/Cart" >
             <div className="cursor-pointer hover:text-gray-300">
               <LuShoppingCart className="text-xl" />
             </div>

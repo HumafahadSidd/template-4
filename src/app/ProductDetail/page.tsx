@@ -30,32 +30,37 @@ const ProductDetails: React.FC = () => {
           <Image src="/p5/Rectangle 136.png" alt="Lamp" width={150} height={155} />
           <Image src="/p5/Rectangle 137.png" alt="Wallet" width={150} height={155} />
         </div>
-        
-        {/* Main Product Info */}
-        <div className="flex flex-col">
-          <Image src="/p5/Rectangle 138.png" alt="Handbag" width={375} height={487}  />
-          <div>
-          <h1 className="text-2xl font-bold">Plywood Arm Chair</h1>
+     {/* Main Product Info */}
+<div className="flex flex-row space-x-4">        
+  <Image src="/p5/Rectangle 138.png" alt="Handbag" width={375} height={487}  />
+  <div className="flex flex-col space-y-4">
+    <h1 className="text-2xl font-bold">Plywood Arm Chair</h1>
 
-          <div className="flex items-center space-x-2 my-4">
-            <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-            <span>(21)</span>
-          </div>
+    <div className="flex items-center space-x-2 my-4">
+      <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+      <span>(21)</span>
+    </div>
 
-          <div className="my-4">
-            <span className="line-through mr-4">$32.00</span>
-            <span className="text-red-500">$19.00</span>
-          </div>
-          </div>
-          <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
+    <div className="my-4">
+      <span className="line-through mr-4">$32.00</span>
+      <span className="text-red-500">$19.00</span>
+    </div>
 
-          <button className=" text-black py-2 px-4 rounded">Add To Cart</button>
-          </div>
-          <div className="mt-8">
-            <p><strong>Categories:</strong> Furniture, Chairs</p>
-            <p><strong>Tags:</strong> Armchair, Wooden</p>
-            <p><strong>Share:</strong> Social Media Links</p>
-          </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
+
+    <button className="text-black py-2 px-4 rounded">Add To Cart</button>
+
+
+<div className="mt-8 space-y-10">
+  <p><strong>Categories:</strong> Furniture, Chairs</p>
+  <p><strong>Tags:</strong> Armchair, Wooden</p>
+  <p><strong>Share:</strong> Social Media Links</p>
+</div>
+</div>
+</div>
+
+  
+       
         
       </section>
 
