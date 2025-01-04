@@ -108,7 +108,7 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function ShopLeft() {
   return (
-    <div>
+    <div className=''>
       
       <div className='bg-[#F6F5FF] h-[286px] pl-[618px] pt-[111px] w-full'>
         <h1 className='text-3xl text-indigo-800'>Shop Left Sidebar</h1>
@@ -123,17 +123,16 @@ export default function ShopLeft() {
       <div className='m-8'>
         <Navbar />
       </div>
-      <div className='main flex'>
-              <div className='leftSideBar ml-4<Link href={"/"}'>
-      
+      <div className='main '>
+                           
         <FilterSidebar />
-      </div>
-      <div className='ml-[250px]'>
+    </div>
+      <div className='ml-[250px]' >
         {products.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
-    </div>
+    
   );
 }
