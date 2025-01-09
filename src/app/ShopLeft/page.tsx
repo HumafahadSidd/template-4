@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar.';
 
 import FilterSidebar from '@/components/FilterSideBar';
 import Link from 'next/link';
@@ -75,31 +74,25 @@ const products: Product[] = [
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <div className='border shadow-sm mt-4 ml-6 h-[230px] w-[920px] pt-3'>
-      <div className='ml-4'>
-        <div className="flex gap-4">
-          <div>
-            <Image src={product.imageSrc} alt={product.title} height={300} width={300} />
-          </div>
-          <div className="flex flex-col justify-between">
-            <h2 className='text-[#111C85] font-semibold text-2xl mt-2'>{product.title}</h2>
-            <div className="flex gap-2 mt-4">
-              {[...Array(product.ratings)].map((_, index) => (
-                <Image key={index} src="/p3/ant-design_star-filled.png" alt="star" height={20} width={20} />
-              ))}
-              <Image src="/p3/vector.png" alt="star empty" height={20} width={20} />
-            </div>
-            <div className='flex gap-2 mt-4'>
-              <p>{product.price}</p>
-              <p className='text-pink-400'><del>{product.originalPrice}</del></p>
-            </div>
-            <p className='text-left w-[600px] h-[50px] mt-2'>{product.description}</p>
-            <div className='mt-2 flex gap-2'>
-              <Image src="/p3/uil_heart-alt.png" alt="heart" height={20} width={20} />
-              <Image src="/p3/uil_search-plus (1).png" alt="search" height={20} width={20} />
-              <Image src="/p3/fluent_cart-24-regular.png" alt="cart" height={20} width={20} />
-            </div>
-          </div>
+    <div className='border shadow-sm mt-4 p-4 flex'>
+      <Image src={product.imageSrc} alt={product.title} height={300} width={300} />
+      <div className='ml-4 flex flex-col justify-between'>
+        <h2 className='text-[#111C85] font-semibold text-2xl'>{product.title}</h2>
+        <div className='flex gap-2 mt-2'>
+          {[...Array(product.ratings)].map((_, index) => (
+            <Image key={index} src="/p3/ant-design_star-filled.png" alt="star" height={20} width={20} />
+          ))}
+          <Image src="/p3/vector.png" alt="star empty" height={20} width={20} />
+        </div>
+        <div className='flex gap-2 mt-4'>
+          <p>{product.price}</p>
+          <p className='text-pink-400'><del>{product.originalPrice}</del></p>
+        </div>
+        <p className='text-left w-[600px] mt-2'>{product.description}</p>
+        <div className='mt-2 flex gap-2'>
+          <Image src="/p3/uil_heart-alt.png" alt="heart" height={20} width={20} />
+          <Image src="/p3/uil_search-plus (1).png" alt="search" height={20} width={20} />
+          <Image src="/p3/fluent_cart-24-regular.png" alt="cart" height={20} width={20} />
         </div>
       </div>
     </div>
@@ -109,30 +102,23 @@ function ProductCard({ product }: { product: Product }) {
 export default function ShopLeft() {
   return (
     <div className=''>
-      
       <div className='bg-[#F6F5FF] h-[286px] pl-[618px] pt-[111px] w-full'>
         <h1 className='text-3xl text-indigo-800'>Shop Left Sidebar</h1>
-        <div>
-          <ul className='flex gap-3'>
-            <li><Link href="/" className='hover:text-pink-500'>Home</Link></li>
-            <li><Link href="/Pages" className='hover:text-pink-500'>Pages</Link></li>
-            <li><Link href="/ShopList/ShopGrid/ShopLeft" className='hover:text-pink-500'>Shop Left Sidebar</Link></li>
-          </ul>
+        <ul className='flex gap-3'>
+          <li><Link href="/" className='hover:text-pink-500'>Home</Link></li>
+          <li><Link href="/Pages" className='hover:text-pink-500'>Pages</Link></li>
+          <li><Link href="ShopLeft" className='hover:text-pink-500'>Shop Left Sidebar</Link></li>
+        </ul>
+      </div>
+      
+      <div className='flex'>
+        <FilterSidebar />
+        <div className='w-3/4 ml-[250px]'>
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
-      <div className='m-8'>
-        <Navbar />
-      </div>
-      <div className='main '>
-                           
-        <FilterSidebar />
     </div>
-      <div className='ml-[250px]' >
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </div>
-    
   );
 }

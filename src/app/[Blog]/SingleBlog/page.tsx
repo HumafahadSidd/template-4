@@ -1,14 +1,14 @@
-
 "use client"; 
 import React from "react";
 import Image from "next/image";
+
 
 const SingleBlog = () => {
   return (
     <div className="w-full bg-gray-50">
       {/* Header Section */}
-      <div className="w-full bg-gray-100 py-6 text-center">
-        <h1 className="text-2xl font-bold text-blue-900">Single Blog</h1>
+      <div className="w-full h-[300px] bg-gray-100 py-6 pl-[250px] pt-4">
+        <h1 className="text-2xl font-bold text-blue-900  pt-10">Single Blog</h1>
         <p className="text-gray-500">
           Home / Pages / <span className="text-pink-500">Single Blog</span>
         </p>
@@ -20,14 +20,14 @@ const SingleBlog = () => {
         <div className="lg:col-span-2">
           {/* Blog Image */}
           <Image
-            src="/29.png" 
+            src="/blog1.png"
             alt="Blog Main Image"
             height={453} width={800}
           />
 
           {/* Blog Meta Info */}
           <div className="flex items-center text-gray-600 text-sm mb-4">
-            <span className="mr-4">📅 April 10, 2024</span>
+            <span className="mr-4">📅 April 10, 4</span>
             <span className="mr-4">🧑 Author: John Doe</span>
             <span>💬 Comments: 3</span>
           </div>
@@ -62,9 +62,9 @@ const SingleBlog = () => {
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="relative">
               <Image
-                src="#"
+                src="/3blog.png" // Replace with a valid image path or URL
                 alt="Video Thumbnail"
-                height={300} width={400}  
+                height={450} width={800}
               />
               <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full hover:bg-pink-600 transition">
                 ▶
@@ -79,18 +79,22 @@ const SingleBlog = () => {
 
           <p className="text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            vehicula lacus nisl, ut fermentum arcu volutpat eget.
+            vehicula lacus nisl, ut fermentum arcu volutpat eget. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente sed nobis, a amet minus nemo suscipit consequatur explicabo adipisci cupiditate voluptatum odit illo ea dolores quasi! Numquam commodi exercitationem officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ad omnis possimus recusandae. Temporibus voluptas, cum sed voluptatem quam nobis ipsam optio assumenda quod aliquid, ullam debitis ducimus accusantium consectetur.
           </p>
         </div>
+
+
+  
 
         {/* Sidebar */}
         <div className="lg:col-span-1">
           {/* Search */}
           <div className="mb-8">
             <input
+           
               type="text"
               placeholder="Search"
-              className="w-full p-2 border rounded-lg focus:outline-none focus:border-pink-500"
+              className="w-full p-2 border rounded-lg  bg-white text-black focus:outline-none focus:border-pink-500"
             />
           </div>
 
@@ -195,6 +199,33 @@ const SingleBlog = () => {
           <div className="text-center">
             <Image
               src="/Group 85.png"
+              alt="Product 3"
+              height={300} width={400}
+            />
+            <h4 className="font-semibold text-gray-800">Queen Seat</h4>
+            <p className="text-pink-500">$399</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="/Group 248.png"
+              alt="Product 3"
+              height={300} width={400}
+            />
+            <h4 className="font-semibold text-gray-800">Queen Seat</h4>
+            <p className="text-pink-500">$399</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="/Group 249.png"
+              alt="Product 3"
+              height={300} width={400}
+            />
+            <h4 className="font-semibold text-gray-800">Queen Seat</h4>
+            <p className="text-pink-500">$399</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="/Group 250.png"
               alt="Product 3"
               height={300} width={400}
             />

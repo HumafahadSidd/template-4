@@ -21,13 +21,13 @@ const Navbar: React.FC = () => {
             <div>
               <label
                 htmlFor="perPage"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-gray-700 bg-white"
               >
                 Per Page:
               </label>
               <select
                 id="perPage"
-                className="ml-2 px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="ml-2 px-3 py-2 text-sm border bg-white border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               >
                 <option>10</option>
                 <option>20</option>
@@ -40,13 +40,13 @@ const Navbar: React.FC = () => {
             <div>
               <label
                 htmlFor="sortBy"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium bg-white text-gray-700"
               >
                 Sort By:
               </label>
               <select
                 id="sortBy"
-                className="ml-2 px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="ml-2 px-3 py-2 text-sm border bg-white border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               >
                 <option>Size</option>
                 <option>Price</option>
@@ -59,13 +59,13 @@ const Navbar: React.FC = () => {
             <div>
               <label
                 htmlFor="view"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium bg-white text-gray-700"
               >
                 View:
               </label>
               <select
                 id="view"
-                className="ml-2 px-4 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="ml-2 px-4 py-2 text-sm border bg-white border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               >
                 <option value="">Grid</option>
                 <option value="">List</option>

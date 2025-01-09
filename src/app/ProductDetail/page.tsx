@@ -7,15 +7,14 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="container mx-auto px-5 mt-5 ">
      
-     <div className='bg-[#F6F5FF] h-[286px] pl-[618px] pt-[111px] w-full'>
+     <div className='bg-[#F6F5FF] h-[286px] pl-[150px] pt-[111px] w-full'>
         <h1 className='text-3xl text-indigo-800'>Product Details</h1>
         <div>
           {/* Breadcrumb */}
       <p className="text-gray-500 text-sm">
         <Link href="/">Home</Link> &gt; 
         <Link href="/Pages">Pages</Link> &gt; 
-        <Link href="/Products">Products</Link> &gt; 
-        Product Details
+        <Link href="/Products">Product Details</Link> &gt;
       </p>
 
                   </div>

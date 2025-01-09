@@ -36,22 +36,7 @@ const BrandFilter: React.FC = () => {
     <div className="p-4 max-w-md mx-auto sm:p-6 bg-white rounded shadow">
       <h2 className="text-lg font-bold mb-4 text-center">Product Brand</h2>
 
-      {/* Buttons for Select All and Clear All */}
-      <div className="flex flex-col sm:flex-row justify-between gap-2 mb-4">
-        <button
-          onClick={handleSelectAll}
-          className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-300"
-        >
-          Select All
-        </button>
-        <button
-          onClick={handleClearAll}
-          className="w-full sm:w-auto px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:ring-2 focus:ring-gray-300"
-        >
-          Clear All
-        </button>
-      </div>
-
+      
       {/* List of Brands */}
       <ul className="space-y-2">
         {brands.map((brand) => (
@@ -74,6 +59,22 @@ const BrandFilter: React.FC = () => {
       {selectedBrands.length === 0 && (
         <p className="mt-4 text-gray-500 text-sm text-center">No brands selected.</p>
       )}
+      {/* Buttons for Select All and Clear All */}
+      <div className="flex flex-col sm:flex-row justify-between gap-2 mb-4">
+        <button
+          onClick={handleSelectAll}
+          className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-300"
+        >
+          Select All
+        </button>
+        <button
+          onClick={handleClearAll}
+          className="w-full sm:w-auto px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:ring-2 focus:ring-gray-300"
+        >
+          Clear All
+        </button>
+      </div>
+
     </div>
   );
 };

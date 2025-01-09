@@ -43,8 +43,35 @@ const products: Product[] = [
     ratings: 4,
   },
   {
-    id: 4,
+    id: 5,
+    imageSrc: "/p3/Rectangle 32 (3).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 6,
     imageSrc: "/p3/Rectangle 32 (4).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 7,
+    imageSrc: "/p3/Rectangle 32 (5).png",
+    title: "Accumsan tincidunt",
+    price: "$26.00",
+    originalPrice: "$52.00",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    ratings: 4,
+  },
+  {
+    id: 8,
+    imageSrc: "/p3/Rectangle 32 (6).png",
     title: "Accumsan tincidunt",
     price: "$26.00",
     originalPrice: "$52.00",
@@ -107,7 +134,7 @@ export default function ShopList() {
           <ul className='flex gap-3'>
             <Link href="/"><li className='hover:text-pink-500'>Home</li></Link>
             <Link href="/Pages"><li className='hover:text-pink-500'>Pages</li></Link>
-            <Link href="/ShopList/ShopGrid"><li className='hover:text-pink-500'>Shop Grid Default</li></Link>
+            <Link href="/ShopGridDefault"><li className='hover:text-pink-500'>Shop Grid Default</li></Link>
           </ul>
         </div>
       </div>
