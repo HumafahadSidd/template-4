@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
             est adipiscing in phasellus non in justo.
           </p>
           <button className="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">
-            <Link href="/ShopNow">Shop Now</Link>
+            <Link href="/ShopList">Shop Now</Link>
           </button>
         </div>
 

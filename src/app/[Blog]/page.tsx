@@ -1,12 +1,11 @@
 import React from 'react';
-import Navbar from '@/components/NavBar'
 import LatestBlog from '@/components/latestblog';
 import BlogSidebar from '@/components/BlogSideBar';
 
 const Blog: React.FC = () => {
   return (
     <div>
-      <Navbar />
+      
       <div className='w-full h-[286px] bg-[#F6F9F5]'>
         <h1 className='text-3xl ml-32 pt-[60px] text-[#101750]'>Blog Page</h1>
         <ul className='flex ml-32 pt-10 text-[#101750] gap-5'>

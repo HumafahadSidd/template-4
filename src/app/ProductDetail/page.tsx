@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AddToCartToastify } from '@/components/AddToCartToastify';
 
 
 const ProductDetails: React.FC = () => {
@@ -47,8 +48,11 @@ const ProductDetails: React.FC = () => {
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
 
-    <button className="text-black py-2 px-4 rounded">Add To Cart</button>
-
+   <div className='px-3 py-2 pl-8'>
+    
+    <AddToCartToastify />
+   <Link href={ "/ShoppingCart"}><button className="text-black py-2 px-4 rounded border bg-red-300"> Add To Cart</button></Link>
+   </div>
 
 <div className="mt-8 space-y-10">
   <p><strong>Categories:</strong> Furniture, Chairs</p>

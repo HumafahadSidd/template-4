@@ -17,7 +17,7 @@ const SingleBlog = () => {
       {/* Blog Content */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 py-10 px-6">
         {/* Blog Article */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 pl-[80px]">
           {/* Blog Image */}
           <Image
             src="/blog1.png"
