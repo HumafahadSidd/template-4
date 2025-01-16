@@ -1,7 +1,15 @@
 import React from "react";
+// import { useSelector } from "react-redux";
 
 const Navbar: React.FC = () => {
-  return (
+  
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    
+     
+    return (
+       <header className="w-full fixed bg-white z-10 top-0  h-[60px] md:h-[90px] flex justify-between  pr-2 items-center max-w-screen-2xl mx-auto">
+             <div className="flex justify-center items-center ">
+    
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between lg:items-center h-auto lg:h-20 space-y-4 lg:space-y-0">
@@ -76,6 +84,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
+    </div>
+    </header>
   );
 };
 

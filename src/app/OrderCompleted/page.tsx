@@ -23,7 +23,7 @@ const OrderComplete: React.FC = () => {
         <p className='mt-2 text-gray-600'>Your order number is <span className='font-semibold'>#123456</span></p>
         <p className='mt-2 text-gray-600'>We have sent you an email confirmation to <span className='font-semibold'>your-email@example.com</span></p>
         <div className='mt-6'>
-          <Link href={"/Pages"}>
+          <Link href={"/"}>
             <button className='px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600'>Continue Shopping</button>
           </Link>
         </div>
