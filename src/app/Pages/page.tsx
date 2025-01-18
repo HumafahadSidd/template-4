@@ -3,9 +3,11 @@ import React from 'react'
 import Image from 'next/image';
 import Navbar from '@/components/Navbar.';
 import GridDefault from '@/components/GridDefault';
+import ProductList2 from '@/components/ProductList2';
 
 
 export default function ShopGridDefault() {
+
 const imageRows = [
   {
     row: 1,
@@ -48,22 +50,23 @@ const imageRows = [
     <GridDefault />
           </div>
     <section className="mt-8 justify-center ml-[200px] ">
-      <div className='m-6'>
-      <Navbar />
-      </div>
-      {imageRows.map((row, index) => (
+  
+    <Navbar />
+    <ProductList2 />
+              {imageRows.map((row, index) => (
         <div key={index} className={`flex ${row.row === 'banner' ? 'justify-center' : 'space-x-4'}`}>
           {row.images.map((img, i) => (
             <div key={i} className={row.row === 'banner' ? 'mt-6 mb-2' :''}>
               <Image src={img.src} alt={img.alt} height={img.height} width={img.width} />
             </div>
+            
           ))}
         </div>
-        
+             
         
       ))}
     </section>
     </div>
-  );
+    );
 }
 
