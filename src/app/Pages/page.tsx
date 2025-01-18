@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image';
 import Navbar from '@/components/Navbar.';
 import GridDefault from '@/components/GridDefault';
-import ProductList2 from '@/components/ProductList2';
 
 
 export default function ShopGridDefault() {
@@ -52,7 +51,7 @@ const imageRows = [
     <section className="mt-8 justify-center ml-[200px] ">
   
     <Navbar />
-    <ProductList2 />
+  
               {imageRows.map((row, index) => (
         <div key={index} className={`flex ${row.row === 'banner' ? 'justify-center' : 'space-x-4'}`}>
           {row.images.map((img, i) => (

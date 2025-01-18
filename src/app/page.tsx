@@ -9,13 +9,15 @@ import TopCategories from "@/components/TopCategories";
 import TrendingProducts from "@/components/TrendingProducts";
 import UniqueFeatures from "@/components/UniqueFeatures";
 
-import LatestBlog from "@/components/latestblog";
+import { fetchProducts } from "@/components/fetchData";
 
 
 
-export default function Home() {
+export default async function Home() {
+await fetchProducts()
   return (
     <div>
+      
       <div>
         <HeroSection />
         
@@ -27,7 +29,7 @@ export default function Home() {
       <DiscountItem />
       <TopCategories />
      <SubscribeBanner />
-    <LatestBlog />
+    
 
     </div>
     </div>
