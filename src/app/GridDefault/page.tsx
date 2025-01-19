@@ -13,7 +13,7 @@ const imageRows = [
       { src: "/p2/e.c1.png", alt: "sofa", height: 300, width: 270 },
       { src: "/p2/ec5.png", alt: "sofa", height: 300, width: 270 },
       { src: "/Ecommerce accesories (2).png", alt: "sofa", height: 300, width: 270 },
-      { src: "/ec5.png", alt: "sofa", height: 300, width: 270 },
+      // { src: "/.png", alt: "sofa", height: 300, width: 270 },
     ],
   },
   {

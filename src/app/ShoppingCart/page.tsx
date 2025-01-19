@@ -43,7 +43,7 @@ const ShoppingCart: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className='w-full lg:w-2/3 px-4 mt-5'>
+      <div className='w-full lg:w-2/3 px-4 mt-5 max-h-screen'>
         <div className='flex justify-between'>
           <div className='font-bold text-indigo-400'><h1>Product</h1></div>
           <div className='font-bold text-indigo-400'><h1>Price</h1></div>
