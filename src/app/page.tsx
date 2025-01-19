@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import React, { useEffect, useState } from 'react';
 import DiscountItem from "@/components/DiscountItems";
@@ -10,7 +11,7 @@ import TopCategories from "@/components/TopCategories";
 import TrendingProducts from "@/components/TrendingProducts";
 import UniqueFeatures from "@/components/UniqueFeatures";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import Image from 'next/image';
+
 
 interface Product {
     _id: string;
@@ -68,26 +69,7 @@ const Home: React.FC = () => {
             <TopCategories />
             <SubscribeBanner />
 
-            <div>
-                <h1>Products</h1>
-                {products.map((product) => (
-                    <div key={product._id}>
-                        <h2>{product.name}</h2>
-                        <Image
-                            src={product.image.asset.url}
-                            alt={product.name}
-                            width={200}
-                            height={200}
-                        />
-                        <p>{product.price}</p>
-                        <p>{product.description}</p>
-                        <p>Discount: {product.discountPercentage}%</p>
-                        <p>Featured: {product.isFeaturedProduct ? 'Yes' : 'No'}</p>
-                        <p>Stock Level: {product.stockLevel}</p>
-                        <p>Category: {product.category}</p>
-                    </div>
-                ))}
-            </div>
+           
         </div>
     );
 };
