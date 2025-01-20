@@ -97,25 +97,28 @@ export default function ShopGridDefault() {
         <div className='m-6'>
           <Navbar />
         </div>
-        <div>
-          <h1>Products</h1>
+        <div className=' border shadow-md p-4 mt-4 m-4 '>
+          <h1 className='text-center text-2xl font-bold'>Products</h1>
+          <div className='grid grid-cols-3 border p-2 m-2 mb-4 mt-2 bg-slate-400'>
           {products.map((product) => (
             <div key={product._id}>
-              <h2>{product.name}</h2>
+              <h2 className='font-bold mb-1 text-center'>{product.name}</h2>
               <Image
                 src={product.image.asset.url}
                 alt={product.name}
                 width={200}
                 height={200}
               />
-              <p>{product.price}</p>
-              <p>{product.description}</p>
+              <p>Price:{product.price}</p>
+              <p>Discription:{product.description}</p>
               <p>Discount: {product.discountPercentage}%</p>
               <p>Featured: {product.isFeaturedProduct ? 'Yes' : 'No'}</p>
               <p>Stock Level: {product.stockLevel}</p>
               <p>Category: {product.category}</p>
             </div>
+            
           ))}
+        </div>
         </div>
         {imageRows.map((row, index) => (
           <div key={index} className={`flex ${row.row === 'banner' ? 'justify-center' : 'space-x-4'}`}>
@@ -123,8 +126,11 @@ export default function ShopGridDefault() {
               <div key={i} className={row.row === 'banner' ? 'mt-6 mb-2' : ''}>
                 <Image src={img.src} alt={img.alt} height={img.height} width={img.width} />
               </div>
+              
             ))}
           </div>
+        
+          
         ))}
       </section>
     </div>
