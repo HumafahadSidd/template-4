@@ -9,6 +9,7 @@ interface Product {
   imageSrc: string;
 }
 
+
 const products: Product[] = [
   { id: 1, name: 'Product 1', price: '$29.99', description: 'This is a great product.', imageSrc: '/29.png' },
   { id: 2, name: 'Product 2', price: '$39.99', description: 'This is another great product.', imageSrc: '/2blog.png' },
@@ -30,7 +31,7 @@ const ProductList: React.FC = () => (
   <div className="p-8">
     <h1 className="text-2xl font-bold mb-6">Product List</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {products.map((product) => (
+      {products.map((product: Product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>

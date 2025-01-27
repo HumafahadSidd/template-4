@@ -12,6 +12,14 @@ export const Product = {
         validation: (Rule: Rule) => Rule.required().error('Name is required'),
       },
       {
+        name:"slug",
+        type:"slug",
+        title :"Slug",
+        options:{
+          source:"product"
+        }
+      },
+      {
         name: 'image',
         type: 'image',
         title: 'Image',

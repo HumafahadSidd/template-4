@@ -1,13 +1,11 @@
 import React from "react";
-// import { useSelector } from "react-redux";
 
 const Navbar: React.FC = () => {
   
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    
+        
      
     return (
-       <header className="w-full fixed bg-white z-10 top-0  h-[60px] md:h-[90px] flex justify-between  pr-2 items-center max-w-screen-2xl mx-auto">
+       <header className="w-full bg-white h-[60px] md:h-[90px] flex justify-center   pr-2 items-center max-w-screen-2xl mx-auto">
              <div className="flex justify-center items-center ">
     
     <nav className="bg-white shadow-md">

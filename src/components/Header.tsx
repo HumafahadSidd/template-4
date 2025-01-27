@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link
-                href="/GridDefault"
+                href="/Pages"
                 className="hover:text-gray-900 transition duration-200"
                 onClick={handleLinkClick}
               >
@@ -137,7 +137,7 @@ const Header: React.FC = () => {
         </li>
         <li className="border-b">
           <Link
-            href="/ShopGridDefault"
+            href="/Pages"
             className="block py-2 px-4 hover:text-gray-900 transition duration-200"
             onClick={handleLinkClick}
           >
